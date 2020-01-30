@@ -1,0 +1,36 @@
+import random
+import time
+
+#This is a guessing game built with random and time
+# problems with the game is the human is always at a disavantage 
+# the human has to guess the number the computer picks
+#good luck getting a point very hard.....
+# do improve the code and if you want it implemented holla i'll add it to the existing version do comment in 
+#do comment in your Social Handles...... 
+'''
+'''
+
+while True:
+    
+  #We need to give a range of numbers the computer and human can pick from lets go with 0 - 101(0 - 100) since computer counting starts with 0 we need t0 add a 1
+  computerNum = random.randint(0, 101) #this link of code makes use of the random module and within this module we have the randint and we specify "from to"
+  #we just created a random generator for the computer 
+
+  #next we create one for the human but humans arent like computer we are bad at following rules....
+  #how do we make it the user follows the rules we could:
+  # receive an integer input from the user
+  # -use a range 
+  # - and a comparsion operator 
+
+  #human number picker:
+  humanNumber = eval(input('Enter a number from 0 - 100 :')) #here we ask the user to input a value
+  if humanNumber in range(0, 101): #here we check to see if the user inputted number is in the range of 0 - 100
+      print(humanNumber)
+  elif humanNumber not in range(0, 101):
+      print('You picked the wrong digit pls try again') # this code only runs if the human inputs the wrong value   
+
+  #now we need to check if the computer value is  equal to the human value
+  if humanNumber == computerNum:
+    print('Human WINS!!!')
+  elif humanNumber != computerNum:
+    print('You loose computer WINS!!!!, AI for life')#pls this is not an AI program just fooling around   
